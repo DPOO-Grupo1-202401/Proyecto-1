@@ -4,13 +4,14 @@ import java.time.LocalDate;
 
 public abstract class Pieza {
 	
-	protected String titulo;
-	protected LocalDate anio;
-	protected String lugarCreacion;
-	protected String autor;
-	protected String estado;
-	protected LocalDate fechaConsignacion;
-	protected Boolean bloqueada;
+	private String titulo;
+	private String anio;
+	private String lugarCreacion;
+	private Usuario autor;
+	private String estado;
+	private String fechaConsignacion;
+	private Boolean bloqueada;
+	private Propietario propietario;
 	
 	
 	public String getTitulo() {
@@ -19,16 +20,23 @@ public abstract class Pieza {
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
-	public void setAnio(LocalDate anio) {
+	public void setAnio(String anio) {
 		this.anio = anio;
 	}
+	public String getAnio() {
+		return anio;
+
 	public void setLugarCreacion(String lugarCreacion) {
 		this.lugarCreacion = lugarCreacion;
 	}
-	public String getAutor() {
+	public String getlugarCreacion() {
+		return lugarCreacion;
+	}
+
+	public Usuario getAutor() {
 		return autor;
 	}
-	public void setAutor(String autor) {
+	public void setAutor(Usuario autor) {
 		this.autor = autor;
 	}
 	public String getEstado() {
@@ -37,10 +45,10 @@ public abstract class Pieza {
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
-	public LocalDate getFechaConsignacion() {
+	public String getFechaConsignacion() {
 		return fechaConsignacion;
 	}
-	public void setFechaConsignacion(LocalDate fechaConsignacion) {
+	public void setFechaConsignacion(String fechaConsignacion) {
 		this.fechaConsignacion = fechaConsignacion;
 	}
 	public Boolean getBloqueada() {
@@ -49,19 +57,40 @@ public abstract class Pieza {
 	public void setBloqueada(Boolean bloqueada) {
 		this.bloqueada = bloqueada;
 	}
+
+	public Propietario getPropietario() {
+		return propietario;
+	}
+	public void setPropietraio(Propietario propietario) {
+		this.propietario = propietario;
+	}
+
+
 	
-	public Pieza(String titulo, LocalDate anio, String lugarCreacion, String autor, String estado,
-			LocalDate fechaConsignacion, Boolean bloqueada) {
-		
+	public Pieza(String titulo, String anio, String lugarCreacion, Usuario autor,String fechaConsignacion,String fechaConsignacion2, Boolean bloqueada2, Propietario propietario) {
 		this.titulo = titulo;
 		this.anio = anio;
 		this.lugarCreacion = lugarCreacion;
 		this.autor = autor;
-		this.estado = estado;
 		this.fechaConsignacion = fechaConsignacion;
-		this.bloqueada = bloqueada;
+		this.propietario = propietario;
 	}
-	
+    public Pieza(String titulo2, LocalDate anio2, String lugarCreacion2, Usuario autor2, String estado2,
+            LocalDate fechaConsignacion2, Boolean bloqueada2) {
+        //TODO Auto-generated constructor stub
+    }
+    public Pieza(String titulo2, LocalDate anio2, String lugarCreacion2, Usuario autor2, LocalDate fechaConsignacion2,
+            Propietario propietario2) {
+        //TODO Auto-generated constructor stub
+    }
+    public Pieza(String titulo2, String anio2, String lugarCreacion2, Usuario autor2, String estado2,
+            String fechaConsignacion2, Boolean bloqueada2, Propietario propietario2) {
+        //TODO Auto-generated constructor stub
+    }
+    public Pieza(String titulo2, String anio2, String lugarCreacion2, Usuario autor2, String estado2,
+            String fechaConsignacion2, Boolean bloqueada2, Propietario propietario2) {
+        //TODO Auto-generated constructor stub
+    }
 	
 	
 }

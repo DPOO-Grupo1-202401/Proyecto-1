@@ -1,0 +1,2 @@
+titulo,anio,lugarCreacion,autor,fechaConsignacion,duracion,formato,dispositivoReproduccion
+La graduacion,2004.45.12,Medellin,Juan Trujillo,2024.45.2,25,mp4,ipad

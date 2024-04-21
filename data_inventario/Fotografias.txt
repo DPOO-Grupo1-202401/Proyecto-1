@@ -1,0 +1,2 @@
+titulo,anio,lugarCreacion,autor,fechaConsignacion,tecnica,tipoImpresion,edicion
+El paisaje,2013.4.5,Bogota,Juan Castilla,2024.40.60,Plano Americano,Foto papel Bond,4edicio

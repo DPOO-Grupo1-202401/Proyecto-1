@@ -1,0 +1,2 @@
+titulo,anio,lugarCreacion,autor,fechaConsignacion,alto,ancho,tecnica
+La Macarena,2000.425.22,Barranquilla,Santiago Rodriugez,2024.165.45,456,56,al oleo

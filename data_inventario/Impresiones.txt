@@ -1,0 +1,2 @@
+titulo,anio,lugarCreacion,autor,fechaConsignacion,tecnica,tipoPapelSoporte,edicion
+La bonga,2003.4.6,Cartagena,Ana Lopez,2024.4.66,Impresora 3d,Fotogradico, 8edicion
