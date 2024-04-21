@@ -67,7 +67,7 @@ public abstract class Pieza {
 
 
 	
-	public Pieza(String titulo, String anio, String lugarCreacion, Usuario autor,String fechaConsignacion,String fechaConsignacion2, Boolean bloqueada2, Propietario propietario) {
+	public Pieza(String titulo, String anio, String lugarCreacion, Usuario autor,String fechaConsignacion,Propietario propietario) {
 		this.titulo = titulo;
 		this.anio = anio;
 		this.lugarCreacion = lugarCreacion;
@@ -79,7 +79,7 @@ public abstract class Pieza {
             LocalDate fechaConsignacion2, Boolean bloqueada2) {
         //TODO Auto-generated constructor stub
     }
-    public Pieza(String titulo2, LocalDate anio2, String lugarCreacion2, Usuario autor2, LocalDate fechaConsignacion2,
+    public Pieza(String titulo2, String anio2, String lugarCreacion2, Usuario autor2, String fechaConsignacion2,
             Propietario propietario2) {
         //TODO Auto-generated constructor stub
     }

@@ -7,31 +7,31 @@ import java.time.LocalDate;
 public class Escultura extends Pieza{
 	
 
-	private float alto;
-	private float ancho;
-	private float profundidad;
+	private String alto;
+	private String ancho;
+	private String profundidad;
 	private String materialesConstruccion;
-	private float peso;
-	private Boolean requiereElectricidad;
+	private String peso;
+	private String requiereElectricidad;
 	
 	
 
-	public void setAlto(float alto) {
+	public void setAlto(String alto) {
 		this.alto = alto;
 	}
-	public float getAlto() {
+	public String getAlto() {
 		return alto;
 	}
-	public void setAncho(float ancho) {
+	public void setAncho(String ancho) {
 		this.ancho = ancho;
 	}
-	public float getAncho() {
+	public String getAncho() {
 		return ancho;
 	}
-	public void setProfundidad(float profundidad) {
+	public void setProfundidad(String profundidad) {
 		this.profundidad = profundidad;
 	}
-	public float getProfundidad() {
+	public String getProfundidad() {
 		return profundidad;
 	}
 
@@ -41,24 +41,24 @@ public class Escultura extends Pieza{
 	public String getMaterialesConstruccion() {
 		return materialesConstruccion;
 	}
-	public void setPeso(float peso) {
+	public void setPeso(String peso) {
 		this.peso = peso;
 	}
-	public float getPeso() {
+	public String getPeso() {
 		return peso;
 	}
-	public void setRequiereElectricidad(Boolean requiereElectricidad) {
+	public void setRequiereElectricidad(String requiereElectricidad) {
 		this.requiereElectricidad = requiereElectricidad;
 	}
-	public Boolean getRequiereElectricidad() {
+	public String getRequiereElectricidad() {
 		return requiereElectricidad;
 	}
 
 
 	public Escultura(String titulo, String anio, String lugarCreacion, Usuario autor, String estado,
-			String fechaConsignacion, Boolean bloqueada, float alto, float ancho, float profundidad,
-			String materialesConstruccion, float peso, Boolean requiereElectricidad,Propietario propietario) {
-		super(titulo, anio, lugarCreacion, autor, fechaConsignacion, propietario);
+			String fechaConsignacion, Boolean bloqueada, String alto, String ancho, String profundidad,
+			String materialesConstruccion, String peso, String requiereElectricidad,Propietario propietario) {
+		super(titulo, anio, lugarCreacion, autor, fechaConsignacion, materialesConstruccion, requiereElectricidad, propietario);
 		
 		this.alto = alto;
 		this.ancho = ancho;
@@ -76,12 +76,12 @@ public class Escultura extends Pieza{
         String autor = escultura.getAutor().getNombre();
         String fechaConsignacion = escultura.getFechaConsignacion();
 		String login = escultura.getPropietario().getLogin();
-        String alto = String() escultura.getAlto();
-        String ancho = String() escultura.getAncho();
-        String profundidad = String() escultura.getProfundidad();
+        float alto = escultura.getAlto();
+        float ancho = escultura.getAncho();
+        float profundidad = escultura.getProfundidad();
         String materialesConstruccion = escultura.getMaterialesConstruccion();
-		String peso = String() escultura.getPeso();
-		String requiereElectricidad = String() escultura.getRequiereElectricidad();
+		float peso = escultura.getPeso();
+		float requiereElectricidad = escultura.getRequiereElectricidad();
 	
 
         agregarEscultura(titulo + "," + anio + "," + lugarCreacion + "," + autor + ","

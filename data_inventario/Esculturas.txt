@@ -1,4 +1,4 @@
-titulo,anio,lugarCreacion,autor,fechaConsignacion,login,alto,ancho,profundidad,materialesConstruccion,peso,requiereElectricidad
+titulo,anio,lugarCreacion,autor,estado,fechaConsignacion,bloqueada,alto,ancho,profundidad,materialesConstruccion,peso,requiereElectricidad,propietario
 David,1504.1.1,Florencia,Italia,Miguel Ángel,2024.04.20,migeul123,517,195,115,Mármol,5600,false
 
 public class InterfazConsola {
