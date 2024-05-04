@@ -1,4 +1,4 @@
-package logica;
+package OLD;
 
 public class Comprador extends Usuario{
 	

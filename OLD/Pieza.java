@@ -1,4 +1,4 @@
-package logica;
+package OLD;
 
 import java.time.LocalDate;
 
@@ -25,7 +25,7 @@ public abstract class Pieza {
 	}
 	public String getAnio() {
 		return anio;
-
+	}
 	public void setLugarCreacion(String lugarCreacion) {
 		this.lugarCreacion = lugarCreacion;
 	}
@@ -75,22 +75,4 @@ public abstract class Pieza {
 		this.fechaConsignacion = fechaConsignacion;
 		this.propietario = propietario;
 	}
-    public Pieza(String titulo2, LocalDate anio2, String lugarCreacion2, Usuario autor2, String estado2,
-            LocalDate fechaConsignacion2, Boolean bloqueada2) {
-        //TODO Auto-generated constructor stub
-    }
-    public Pieza(String titulo2, String anio2, String lugarCreacion2, Usuario autor2, String fechaConsignacion2,
-            Propietario propietario2) {
-        //TODO Auto-generated constructor stub
-    }
-    public Pieza(String titulo2, String anio2, String lugarCreacion2, Usuario autor2, String estado2,
-            String fechaConsignacion2, Boolean bloqueada2, Propietario propietario2) {
-        //TODO Auto-generated constructor stub
-    }
-    public Pieza(String titulo2, String anio2, String lugarCreacion2, Usuario autor2, String estado2,
-            String fechaConsignacion2, Boolean bloqueada2, Propietario propietario2) {
-        //TODO Auto-generated constructor stub
-    }
-	
-	
 }

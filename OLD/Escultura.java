@@ -1,4 +1,4 @@
-package logica;
+package OLD;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -53,12 +53,11 @@ public class Escultura extends Pieza{
 	public String getRequiereElectricidad() {
 		return requiereElectricidad;
 	}
-
-
+	
 	public Escultura(String titulo, String anio, String lugarCreacion, Usuario autor, String estado,
 			String fechaConsignacion, Boolean bloqueada, String alto, String ancho, String profundidad,
-			String materialesConstruccion, String peso, String requiereElectricidad,Propietario propietario) {
-		super(titulo, anio, lugarCreacion, autor, fechaConsignacion, materialesConstruccion, requiereElectricidad, propietario);
+			String materialesConstruccion, String peso, String requiereElectricidad) {
+		super(titulo, anio, lugarCreacion, autor, fechaConsignacion, materialesConstruccion, requiereElectricidad);
 		
 		this.alto = alto;
 		this.ancho = ancho;
@@ -66,7 +65,7 @@ public class Escultura extends Pieza{
 		this.materialesConstruccion = materialesConstruccion;
 		this.peso = peso;
 		this.requiereElectricidad = requiereElectricidad;
-		this.propietario = propietario;
+		
 	}
 
 	public void registrarEsculturas(Escultura escultura) {

@@ -1,0 +1,5 @@
+titulo, anio, lugarCreacion, autor, vendida, fechaConsignacion, bloqueada, ventaAprobada,propietario
+Example Title, 2022, Example Location, Pablo Picasso, false, 2022-01-01, false, false,pedro@domain.com
+Example Title 2, 2023, Example Location 2, Vincent van Gogh, false, 2023-02-01, true, false,maria@domain.com
+Example Title 3, 2024, Example Location 3, Leonardo da Vinci, false, 2024-03-01, false, false,laura@domain.com
+Example Title 4, 2025, Example Location 4, Frida Kahlo, true, 2025-04-01, true, false,sofia@domain.com
