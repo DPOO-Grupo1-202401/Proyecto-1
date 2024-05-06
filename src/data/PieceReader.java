@@ -11,9 +11,10 @@ import java.util.HashMap;
 import model.Piece;
 
 public class PieceReader {
-    public static HashMap<String, Piece> pieces = new HashMap<>();
+    
     private static String filename = "Pieces.csv";
     private static String headers;
+    public static HashMap<String, Piece> pieces = new HashMap<>();
 
     public Integer loadPieces(String path) throws FileNotFoundException, IOException {
         BufferedReader br = new BufferedReader(new FileReader(path + filename));
