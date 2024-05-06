@@ -1,5 +1,10 @@
-titulo, anio, lugarCreacion, autor, vendida, fechaConsignacion, bloqueada, ventaAprobada,propietario
-Example Title,2022,Example Location,Pablo Picasso,false,2022-01-01,true,true,pedro@domain.com
-Example Title 4,2025,Example Location 4,Frida Kahlo,true,2025-04-01,true,false,sofia@domain.com
-Example Title 3,2024,Example Location 3,Leonardo da Vinci,false,2024-03-01,false,false,laura@domain.com
-Example Title 2,2023,Example Location 2,Vincent van Gogh,false,2023-02-01,true,true,maria@domain.com
+titulo, anio, lugarCreacion, autor, vendida, fechaConsignacion, bloqueada, ventaAprobada, propietario, pagada, fechaVenta, precioVenta
+Example Title,2022,Example Location,Pablo Picasso,false,2022-02-01,true,true,pedro@domain.com,false,2024-04-08,8000
+Example Title 4,2015,Example Location 4,Frida Kahlo,false,2021-04-01,true,false,sofia@domain.com,false,2024-02-01,5000
+Example Title 3,2020,Example Location 3,Leonardo da Vinci,false,2023-03-01,false,false,laura@domain.com,false,2024-02-05,7500
+Example Title 2,2023,Example Location 2,Vincent van Gogh,false,2023-02-01,true,false,maria@domain.com,false,2024-03-09,4000
+Example Title 5,2019,Example Location 5,Pablo Neruda, false,2020-06-02,false,false,pedro@domain.com,false,2024-01-04,9000
+Example Title 6,2007,Example Location 6, Nicolas Maquiavelo, true,2018-04-06,true,true,pedro@domain.com,true,2024-02-06,6700
+Example Title 7,2016,Example Location 7, Claude Monet, false,2020-07-08,true,true,pedro@domain.com,true,2024-03-05,8300
+Example Title 8,2021,Example Location 8,Pablo Picasso,false,2022-08-01,true,true,laura@domain.com,false,2024-04-04,9000
+Example Title 9,2011,Example Location 9, Nicolas Maquiavelo, true,2023-04-06,true,true,maria@domain.com,true,2024-09-06,3700
