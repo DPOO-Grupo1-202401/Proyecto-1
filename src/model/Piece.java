@@ -10,11 +10,14 @@ public class Piece {
     private Boolean bloqueada;
 	private String propietarioEmail;
     private Boolean ventaAprobada;
+    private Boolean pagada;
+    private String fechaVenta;
+    private String precioVenta;
 
     
 
     public Piece(String titulo, String anio, String lugarCreacion, String autor, Boolean estado,
-            String fechaConsignacion, Boolean bloqueada, Boolean aprobada, String propietario) {
+            String fechaConsignacion, Boolean bloqueada, Boolean aprobada, String propietario, Boolean pagada, String fechaVenta, String precioVenta) {
         this.titulo = titulo;
         this.anio = anio;
         this.lugarCreacion = lugarCreacion;
@@ -24,6 +27,9 @@ public class Piece {
         this.bloqueada = bloqueada;
         this.ventaAprobada = aprobada;
         this.propietarioEmail = propietario;
+        this.pagada = pagada;
+        this.setFechaVenta(fechaVenta);
+        this.setPrecioVenta(precioVenta);
     }
 
     public String getTitulo() {
@@ -80,6 +86,30 @@ public class Piece {
     public void setVentaAprobada(Boolean ventaAprobada) {
         this.ventaAprobada = ventaAprobada;
     }
+
+	public Boolean getPagada() {
+		return pagada;
+	}
+
+	public void setPagada(Boolean pagada) {
+		this.pagada = pagada;
+	}
+
+	public String getFechaVenta() {
+		return fechaVenta;
+	}
+
+	public void setFechaVenta(String fechaVenta) {
+		this.fechaVenta = fechaVenta;
+	}
+
+	public String getPrecioVenta() {
+		return precioVenta;
+	}
+
+	public void setPrecioVenta(String precioVenta) {
+		this.precioVenta = precioVenta;
+	}
 
     
 }

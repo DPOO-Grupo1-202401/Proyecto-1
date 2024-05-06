@@ -13,6 +13,7 @@ public class InicioDeSesion {
     private UserController userController = new UserController();
     private InterfazCliente interfazCliente = new InterfazCliente();
     private InterfazAdmin interfazAdmin = new InterfazAdmin();
+    private InterfazEmpleado interfazEmpleado = new InterfazEmpleado();
 
     public void mostrarInicioDeSesion(ArrayList<Role> roles) {
         // TODO Auto-generated method stub
@@ -33,6 +34,7 @@ public class InicioDeSesion {
                     break;
                 case "CAJERO":
                     System.out.println("Cajero");
+                    interfazEmpleado.mostrarOpciones();
                     break;
                 case "ADMINISTRADOR":
                     System.out.println("Administrador");
@@ -42,7 +44,7 @@ public class InicioDeSesion {
                     break;
             }
 
-            interfazCliente.mostrarOpciones();
+            
         } else {
             System.out.println("Usuario o contraseña incorrectos");
         }

@@ -2,7 +2,6 @@ package view;
 
 import controller.PieceController;
 import util.Utils;
-import view.ConsultaDePiezas;
 
 public class InterfazCliente {
 
@@ -17,8 +16,10 @@ public class InterfazCliente {
             System.out.println("Bienvenido al Sistema de la Galeria");
             System.out.println("1. Consultar inventario de la galeria");
             System.out.println("2. Comprar una pieza");
-            System.out.println("3. Consultar mis piezas");
-            System.out.println("4. Cerrar sesion");
+            System.out.println("3. Consultar mis piezas en venta");
+            System.out.println("4. Consultar mis piezas compradas");
+            System.out.println("5. Ver piezas de un artista");
+            System.out.println("6. Cerrar sesion");
 
             int opcionSeleccionada = Integer.parseInt(Utils.input("\nPor favor seleccione una opcion"));
 
@@ -28,12 +29,21 @@ public class InterfazCliente {
                     consultaDePiezas.consultarPiezas();
                     break;
                 case 2:
-                    pieceController.comprarPieza(Utils.input("Ingrese el titulo de la pieza"), Utils.input("Ingrese su email"));
+                	// Comprar pieza
+                    pieceController.comprarPieza(Utils.input("Ingrese el titulo de la pieza"), Utils.input("Ingrese su email"),Utils.input("Ingrese su tipo de pago"));
                     break;
                 case 3:
-                    // Consultar mis piezas
+                    // Consultar piezas propias en venta
+                	consultaDePiezas.consultarPiezasPropietario(Utils.input("Ingrese su email"));
                     break;
                 case 4:
+                    // Consultar mis piezas compradas
+                	consultaDePiezas.consultarPiezasPropietario(Utils.input("Ingrese su email"));
+                    break;
+                case 5:
+                    consultaDePiezas.consultarPiezasArtista(Utils.input("Ingrese nombre del artista"));
+                    break;
+                case 6:
                     continuar = false;
                     break;
                 default:

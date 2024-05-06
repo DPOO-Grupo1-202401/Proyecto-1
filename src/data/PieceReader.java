@@ -31,9 +31,12 @@ public class PieceReader {
             Boolean bloqueada = Boolean.parseBoolean(partes[6].strip());
             Boolean aprobada = Boolean.parseBoolean(partes[7].strip());
             String propietario = partes[8].strip();
+            Boolean pagada = Boolean.parseBoolean(partes[9].strip());
+            String fechaVenta = partes[10].strip();
+            String precioVenta = partes[11].strip();
 
             Piece piece = new Piece(titulo, anio, lugarCreacion, autor, vendida, fechaConsignacion, bloqueada, aprobada,
-                    propietario);
+                    propietario, pagada, fechaVenta,precioVenta);
 
             pieces.put(titulo, piece);
 
@@ -52,7 +55,7 @@ public class PieceReader {
         for (Piece piece : pieces.values()) {
             String row = piece.getTitulo() + "," + piece.getAnio() + "," + piece.getLugarCreacion() + "," + piece.getAutor()
                     + "," + piece.getVendida() + "," + piece.getFechaConsignacion() + "," + piece.getBloqueada() + ","
-                    + piece.getVentaAprobada() + "," + piece.getPropietarioEmail();
+                    + piece.getVentaAprobada() + "," + piece.getPropietarioEmail() + "," + piece.getPagada() + "," + piece.getFechaVenta() + "," + piece.getPrecioVenta();
             // data.add(row + "\n");
             editor.append(row + "\n");
         }

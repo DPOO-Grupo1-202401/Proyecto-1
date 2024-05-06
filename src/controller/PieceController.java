@@ -14,7 +14,7 @@ public class PieceController {
         return PieceReader.pieces;
     }
 
-    public void comprarPieza(String titulo, String compradorEmail) {
+    public void comprarPieza(String titulo, String compradorEmail, String tipoPago) {
         Piece piece = PieceReader.pieces.get(titulo);
         if (piece != null){
             piece.setBloqueada(true);
@@ -58,7 +58,35 @@ public class PieceController {
             return false;
         }
     }
+    
+    public Boolean registrarPago(String titulo) {
+        Piece piece = PieceReader.pieces.get(titulo);
+        if (piece != null) {
+            piece.setPagada(true);
+            try {
+                pieceReader.sync("db/");
+            } catch (Exception e) {
+                System.out.println("Error al sincronizar");
+            }
+            return true;
+        } else {
+            return false;
+        }   
+    }
 
-
+    public Boolean registrarVenta(String titulo) {
+        Piece piece = PieceReader.pieces.get(titulo);
+        if (piece != null) {
+            piece.setVendida(true);
+            try {
+                pieceReader.sync("db/");
+            } catch (Exception e) {
+                System.out.println("Error al sincronizar");
+            }
+            return true;
+        } else {
+            return false;
+        }   
+    }
     
 }

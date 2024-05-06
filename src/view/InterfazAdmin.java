@@ -17,8 +17,10 @@ public class InterfazAdmin {
             System.out.println("3. Ver ofertas de compra");
             System.out.println("4. Aprobar oferta de compra");
             System.out.println("5. Denegar oferta de compra");
-            System.out.println("6. Ver ventas");
-            System.out.println("7. Salir");
+            System.out.println("6. Registrar pieza vendida");
+            System.out.println("7. Ver piezas de un artista");
+            System.out.println("8. Ver piezas de un comprador");
+            System.out.println("9. Salir");
             Integer opcion = Integer.parseInt(Utils.input("Ingrese una opcion"));
             switch (opcion) {
                 case 1:
@@ -33,7 +35,7 @@ public class InterfazAdmin {
                     consultaDePiezas.consultarPiezasBloqueadas();
                     break;
                 case 4:
-                // Ver ventas
+                // 	Aprobar oferta
                 {
                     String titulo = Utils.input("Ingrese el titulo de la pieza a aprobar");
                     Boolean success = pieceController.aprobarVenta(titulo);
@@ -45,9 +47,9 @@ public class InterfazAdmin {
                 }
                     break;
                 case 5:
-                // Ver ventas
+                // Denegar oferta
                 {
-                    String titulo = Utils.input("Ingrese el titulo de la pieza a aprobar");
+                    String titulo = Utils.input("Ingrese el titulo de la pieza a denegar");
                     Boolean success = pieceController.denegarVenta(titulo);
                     if (success) {
                         System.out.println("Venta denegada");
@@ -57,10 +59,26 @@ public class InterfazAdmin {
                 }
                     break;
                 case 6:
-                    // Ver ventas
-                    consultaDePiezas.consultarPiezasVendidas();
+                    // Registrar estado pieza vendida
+                {
+                    String titulo = Utils.input("Ingrese el titulo de la pieza que se vendio");
+                    Boolean success = pieceController.registrarVenta(titulo);
+                    if (success) {
+                        System.out.println("Pieza Vendida");
+                    } else {
+                        System.out.println("No se encontro la pieza");
+                    }
+                }
                     break;
                 case 7:
+                	//Piezas de un artista
+                    consultaDePiezas.consultarPiezasArtista(Utils.input("Ingrese nombre del artista"));
+                    break;
+                case 8:
+                    // Consultar piezas de un comprador
+                	consultaDePiezas.consultarPiezasPropietario(Utils.input("Ingrese email del comprador"));
+                    break;
+                case 9:
                     continuar = false;
                     break;
                 default:

@@ -51,9 +51,7 @@ public class InterfazInicio {
                 System.out.println("1. Iniciar sesion como cliente");
                 System.out.println("2. Iniciar sesion como empleado");
                 System.out.println("3. Iniciar sesion como administrador");
-                System.out.println("4. Registrarse como nuevo cliente");
-                System.out.println("5. Consultar inventario de la galeria");
-                System.out.println("6. Salir de la aplicacion");
+                System.out.println("4. Salir de la aplicacion");
 
                 int opcionSeleccionada = Integer.parseInt(Utils.input("\nPor favor seleccione una opcion"));
 
@@ -70,17 +68,9 @@ public class InterfazInicio {
                         break;
                     case 3:
                         System.out.println("Iniciar sesion como administrador");
-                        inicioDeSesion
-                                .mostrarInicioDeSesion(new ArrayList<Role>(Arrays.asList(Role.ADMINISTRADOR)));
+                        inicioDeSesion.mostrarInicioDeSesion(new ArrayList<Role>(Arrays.asList(Role.ADMINISTRADOR)));
                         break;
                     case 4:
-                        System.out.println("Registrarse como nuevo cliente");
-                        break;
-                    case 5:
-                        System.out.println("Consulta de piezas de la galeria");
-                        consultaDePiezas.consultarPiezas();
-                        break;
-                    case 6:
                         System.out.println("Salir de la aplicacion");
                         continuar = false;
                         break;
