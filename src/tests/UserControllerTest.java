@@ -26,7 +26,10 @@ class UserControllerTest {
 	UserReader userReader = new UserReader();
 	UserController userController = new UserController();
 	Integer loadedUsers;
-	HashMap<String, User> users;
+	User userTest;
+	String login = "juan@domain.com";
+	String password = "123";
+	
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
 		
@@ -36,7 +39,7 @@ class UserControllerTest {
 	@BeforeEach
 	void setUp() throws Exception {
 		loadedUsers = userReader.loadUsers("db/Tests/");
-		users =  UserReader.users.get(email);
+		userTest =  UserReader.users.get(login);
 	}
 
 	@Test
@@ -46,7 +49,8 @@ class UserControllerTest {
 
 	@Test
 	void testGetUser() {
-		assertEquals(users,userController.getUser().get(email));
+		assertEquals(userTest,userController.getUser(login));
+		
 	}
-
+	
 }
