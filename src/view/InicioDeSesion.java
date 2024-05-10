@@ -14,6 +14,7 @@ public class InicioDeSesion {
     private InterfazCliente interfazCliente = new InterfazCliente();
     private InterfazAdmin interfazAdmin = new InterfazAdmin();
     private InterfazEmpleado interfazEmpleado = new InterfazEmpleado();
+    private String rolTest;
 
     public void mostrarInicioDeSesion(ArrayList<Role> roles) {
         // TODO Auto-generated method stub
@@ -28,22 +29,26 @@ public class InicioDeSesion {
                 case "CLIENTE":
                     System.out.println("Cliente");
                     interfazCliente.mostrarOpciones();
+                    rolTest = "Cliente";
                     break;
                 case "OPERADOR":
                     System.out.println("Operador");
+                    rolTest = "Operador";
                     break;
                 case "CAJERO":
                     System.out.println("Cajero");
                     interfazEmpleado.mostrarOpciones();
+                    rolTest = "Cajero";
                     break;
                 case "ADMINISTRADOR":
                     System.out.println("Administrador");
                     interfazAdmin.mostrarOpciones();
+                    rolTest = "Administrador";
                     break;
                 default:
                     break;
             }
-
+            
             
         } else {
             System.out.println("Usuario o contraseña incorrectos");

@@ -7,4 +7,4 @@ Example Title 6,2007,Example Location 6,Nicolas Maquiavelo,true,2018-04-06,true,
 Example Title 5,2019,Example Location 5,Pablo Neruda,false,2020-06-02,false,false,pedro@domain.com,false,2024-01-04,9000
 Example Title 4,2015,Example Location 4,Frida Kahlo,false,2021-04-01,true,true,sofia@domain.com,false,2024-02-01,5000
 Example Title 3,2020,Example Location 3,Leonardo da Vinci,false,2023-03-01,false,false,laura@domain.com,false,2024-02-05,7500
-Example Title 2,2023,Example Location 2,Vincent van Gogh,true,2023-02-01,false,false,maria@domain.com,true,2024-03-09,4000
+Example Title 2,2023,Example Location 2,Vincent van Gogh,false,2023-02-01,true,false,maria@domain.com,false,2024-03-09,4000

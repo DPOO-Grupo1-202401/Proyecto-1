@@ -7,6 +7,8 @@ import data.PieceReader;
 import model.Piece;
 
 public class PieceController {
+	
+	private String batabase = "db/";
 
     private PieceReader pieceReader = new PieceReader();
     
@@ -19,7 +21,7 @@ public class PieceController {
         if (piece != null){
             piece.setBloqueada(true);
             try {
-                pieceReader.sync("db/");
+                pieceReader.sync(batabase);
             } catch (Exception e) {
                 System.out.println("Error al sincronizar");
             }
@@ -33,7 +35,7 @@ public class PieceController {
         if (piece != null) {
             piece.setVentaAprobada(true);
             try {
-                pieceReader.sync("db/");
+                pieceReader.sync(batabase);
             } catch (Exception e) {
                 System.out.println("Error al sincronizar");
             }
@@ -49,7 +51,7 @@ public class PieceController {
             piece.setBloqueada(false);
             piece.setVentaAprobada(false);
             try {
-                pieceReader.sync("db/");
+                pieceReader.sync(batabase);
             } catch (Exception e) {
                 System.out.println("Error al sincronizar");
             }
@@ -79,7 +81,7 @@ public class PieceController {
         if (piece != null) {
             piece.setVendida(true);
             try {
-                pieceReader.sync("db/");
+                pieceReader.sync(batabase);
             } catch (Exception e) {
                 System.out.println("Error al sincronizar");
             }

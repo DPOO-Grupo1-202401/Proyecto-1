@@ -19,6 +19,7 @@ public class InterfazInicio {
         InterfazInicio consola = new InterfazInicio();
         consola.cargarDB();
         consola.ejecutarOpcion();
+        
 
     }
 
