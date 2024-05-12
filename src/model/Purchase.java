@@ -1,34 +1,34 @@
 package model;
 
 public class Purchase {
-    private Piece pieza;
-    private User comprador;
-    private Double precio;
+    private String pieza;
+    private String comprador;
+    private String precio;
     private String tipoPago;
     private String fecha;
 
 
-    public Piece getPieza() {
+    public String getPieza() {
         return pieza;
     }
 
-    public void setPieza(Piece pieza) {
+    public void setPieza(String pieza) {
         this.pieza = pieza;
     }
 
-    public User getComprador() {
+    public String getComprador() {
         return comprador;
     }
 
-    public void setComprador(User comprador) {
+    public void setComprador(String comprador) {
         this.comprador = comprador;
     }
 
-    public Double getPrecio() {
+    public String getPrecio() {
         return precio;
     }
 
-    public void setPrecio(Double precio) {
+    public void setPrecio(String precio) {
         this.precio = precio;
     }
 
@@ -49,7 +49,7 @@ public class Purchase {
     }
 
 
-    public Purchase(Piece pieza, User comprador, String tipoPago, String fecha, Double precio) {   
+    public Purchase(String pieza, String comprador, String tipoPago, String fecha, String precio) {   
         this.pieza = pieza;
         this.comprador = comprador;
         this.tipoPago = tipoPago;

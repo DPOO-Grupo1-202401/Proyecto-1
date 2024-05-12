@@ -4,7 +4,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.HashMap;
 import data.PieceReader;
+import data.UserReader;
 import model.Piece;
+import model.User;
+
 
 public class PieceController {
 	
@@ -15,7 +18,15 @@ public class PieceController {
     public HashMap<String, Piece> getPieces() {
         return PieceReader.pieces;
     }
-
+    
+    public void agregarPieza(Piece nuevaPieza) {
+    	PieceReader.pieces.put(nuevaPieza.getTitulo(), nuevaPieza);
+    }
+    
+    
+    
+    
+    
     public void comprarPieza(String titulo, String compradorEmail, String tipoPago) {
         Piece piece = PieceReader.pieces.get(titulo);
         if (piece != null){

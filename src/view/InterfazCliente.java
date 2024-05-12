@@ -35,7 +35,7 @@ public class InterfazCliente {
                 case 3:
                     // Consultar piezas propias en venta
                 	consultaDePiezas.consultarPiezasPropietario(Utils.input("Ingrese su email"));
-                    break;
+                    break;//pedro@domain.com
                 case 4:
                     // Consultar mis piezas compradas
                 	consultaDePiezas.consultarPiezasPropietario(Utils.input("Ingrese su email"));

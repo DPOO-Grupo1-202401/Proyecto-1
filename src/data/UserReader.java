@@ -1,6 +1,7 @@
 package data;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -8,6 +9,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+import model.Piece;
 import model.Role;
 import model.User;
 
@@ -41,16 +43,25 @@ public class UserReader {
 		
 		return users.size();
     }
-
+    
+    
+    
     public Boolean sync(String path) throws FileNotFoundException, IOException{
-        FileWriter editor = new FileWriter(path + filename, true);
-
+        FileWriter editor = new FileWriter(path + filename);
+        editor.write(headers + "\n");
+        // ArrayList<String> data = new ArrayList<>();
+        for (User user : users.values()) {
+            String row = user.getLogin() + "," + user.getPassword() + "," + user.getNombre() + ","
+                    + user.getNumeroTelefono()+ "," + user.getRole();
+            // data.add(row + "\n");
+            editor.append(row + "\n");
+        }
+        editor.flush();
+        editor.close();
         return false;
     }
 
-    public boolean writeUser(){
-        return true;
-    }
+    
 
     
 }

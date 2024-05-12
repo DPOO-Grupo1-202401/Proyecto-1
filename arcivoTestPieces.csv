@@ -1,10 +1,6 @@
-titulo, anio, lugarCreacion, autor, vendida, fechaConsignacion, bloqueada, ventaAprobada, propietario, pagada, fechaVenta, precioVenta
-Example Title 9,2011,Example Location 9,Nicolas Maquiavelo,true,2023-04-06,true,true,maria@domain.com,true,2024-09-06,3700
-Example Title 8,2021,Example Location 8,Pablo Picasso,false,2022-08-01,true,true,laura@domain.com,false,2024-04-04,9000
-Example Title,2022,Example Location,Pablo Picasso,false,2022-02-01,true,true,pedro@domain.com,false,2024-04-08,8000
-Example Title 7,2016,Example Location 7,Claude Monet,false,2020-07-08,true,true,pedro@domain.com,true,2024-03-05,8300
-Example Title 6,2007,Example Location 6,Nicolas Maquiavelo,true,2018-04-06,true,true,pedro@domain.com,true,2024-02-06,6700
-Example Title 5,2019,Example Location 5,Pablo Neruda,false,2020-06-02,false,false,pedro@domain.com,false,2024-01-04,9000
-Example Title 4,2015,Example Location 4,Frida Kahlo,false,2021-04-01,true,true,sofia@domain.com,false,2024-02-01,5000
-Example Title 3,2020,Example Location 3,Leonardo da Vinci,false,2023-03-01,false,false,laura@domain.com,false,2024-02-05,7500
-Example Title 2,2023,Example Location 2,Vincent van Gogh,false,2023-02-01,true,false,maria@domain.com,false,2024-03-09,4000
+titulo,anio,tipo,lugarCreacion,autor,fechaConsignacion,propietarioEmail,exposicion,subasta,bloqueada,ventaAprobada,pagada,vendida,fechaVenta,precioVenta,valorInicial,valorMinimo,fechaLimite
+"The Starry Night",1889,painting,"Saint-Rémy-de-Provence",Vincent van Gogh,1889-06-18,example@example.com,"MoMA Exhibition 2024",false,false,false,true,true,2024-05-10,15500000,20000000,15000000,2024-05-15
+"Mona Lisa",1503,painting,"Florence",Leonardo da Vinci,1503-09-01,user@example.com,"Louvre Exhibition 2023",true,false,false,true,false,,0,100000000,50000000,2023-12-31
+"The Persistence of Memory",1931,painting,"Catalonia",Salvador Dalí,1931-05-08,owner@example.com,"Dalí Museum Exhibit 2025",false,false,true,true,true,2024-11-20,9500000,12000000,8000000,2024-12-15
+"Guernica",1937,painting,"Paris",Pablo Picasso,1937-06-01,collector@example.com,"Picasso Exhibition 2026",false,false,false,false,false,,0,80000000,60000000,2026-01-15
+"The Last Supper",1498,painting,"Milan",Leonardo da Vinci,1498-02-09,admin@example.com,"Vatican Exhibition 2025",false,true,true,true,true,2025-03-20,90000000,120000000,80000000,2025-03-31

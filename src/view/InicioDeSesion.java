@@ -13,7 +13,8 @@ public class InicioDeSesion {
     private UserController userController = new UserController();
     private InterfazCliente interfazCliente = new InterfazCliente();
     private InterfazAdmin interfazAdmin = new InterfazAdmin();
-    private InterfazEmpleado interfazEmpleado = new InterfazEmpleado();
+    private InterfazCajero interfazCajero = new InterfazCajero();
+    private InterfazOperador interfazOperador = new InterfazOperador();
     private String rolTest;
 
     public void mostrarInicioDeSesion(ArrayList<Role> roles) {
@@ -27,22 +28,23 @@ public class InicioDeSesion {
             User user = userController.getUser(login);
             switch (user.getRole().name()) {
                 case "CLIENTE":
-                    System.out.println("Cliente");
+                    System.out.println("Cliente");//pedro@domain.com, passwordxyz
                     interfazCliente.mostrarOpciones();
                     rolTest = "Cliente";
                     break;
                 case "OPERADOR":
                     System.out.println("Operador");
+                    interfazOperador.mostrarOpciones();
                     rolTest = "Operador";
                     break;
                 case "CAJERO":
                     System.out.println("Cajero");
-                    interfazEmpleado.mostrarOpciones();
+                    interfazCajero.mostrarOpciones();
                     rolTest = "Cajero";
                     break;
                 case "ADMINISTRADOR":
                     System.out.println("Administrador");
-                    interfazAdmin.mostrarOpciones();
+                    interfazAdmin.mostrarOpciones();//juan@domain.com,123
                     rolTest = "Administrador";
                     break;
                 default:

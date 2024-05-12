@@ -1,13 +1,14 @@
-login, password, nombre, numeroTelefono, rol
-juan@domain.com, 123, juan, 1111111111, ADMINISTRADOR
-david@domain.com, admin, david, 9999999999, ADMINISTRADOR
-maria@domain.com, password123, maria, 2222222222, CLIENTE
-carlos@domain.com, password456, carlos, 3333333333, CAJERO
-luis@domain.com, password789, luis, 4444444444, CLIENTE
-ana@domain.com, passwordabc, ana, 5555555555, ADMINISTRADOR
-pedro@domain.com, passwordxyz, pedro, 6666666666, CLIENTE
-jose@domain.com, password321, jose, 7777777777, OPERADOR
-sara@domain.com, password654, sara, 8888888888, CAJERO
-miguel@domain.com, password987, miguel, 9999999999, CLIENTE
-laura@domain.com, passwordxyz, laura, 1111111111, CLIENTE
-sofia@domain.com, password321, sofia, 2222222222, CLIENTE
+[Ljava.lang.String;@16b4a017
+miguel@domain.com,password987,miguel,9999999999,CLIENTE;
+laura@domain.com,passwordxyz,laura,1111111111,CLIENTE;
+sara@domain.com,password654,sara,8888888888,CAJERO;
+maria@domain.com,password123,maria,2222222222,CLIENTE;
+carlos@domain.com,password456,carlos,3333333333,CAJERO;
+luis@domain.com,password789,luis,4444444444,CLIENTE;
+jose@domain.com,password321,jose,7777777777,OPERADOR;
+pedro@domain.com,passwordxyz,pedro,6666666666,CLIENTE;
+david@domain.com,admin,david,9999999999,ADMINISTRADOR;
+juan@domain.com,123,juan,1111111111,ADMINISTRADOR;
+sofia@domain.com,password321,sofia,2222222222,CLIENTE;
+sam@domain.com,234,Samuel,31173849,CLIENTE;
+ana@domain.com,passwordabc,ana,5555555555,ADMINISTRADOR;
