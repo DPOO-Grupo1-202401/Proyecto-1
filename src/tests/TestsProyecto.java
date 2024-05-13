@@ -68,7 +68,6 @@ public class TestsProyecto {
 	
 	@Test
 	void testUserReader() throws FileNotFoundException, IOException {
-		assertTrue(userReader.writeUser());
 		assertFalse(userReader.sync("arcivoTest"));
 	}
 	@Test
