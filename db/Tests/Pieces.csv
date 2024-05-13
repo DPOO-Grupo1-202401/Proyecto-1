@@ -1,12 +1,7 @@
-titulo,anio,tipo,lugarCreacion,autor,fechaConsignacion,propietarioEmail,exposicion,subasta,bloqueada,ventaAprobada,pagada,vendida,fechaVenta,precioVenta,valorInicial,valorMinimo,fechaLimite
-
-
-ExampleTitle9,2011,ExampleLocation9,NicolasMaquiavelo,true,2023-04-06,true,true,maria@domain.com,true,2024-09-06,3700
-ExampleTitle8,2021,ExampleLocation8,PabloPicasso,false,2022-08-01,true,true,laura@domain.com,false,2024-04-04,9000
-ExampleTitle,2022,ExampleLocation,PabloPicasso,false,2022-02-01,true,true,pedro@domain.com,false,2024-04-08,8000
-ExampleTitle7,2016,ExampleLocation7,ClaudeMonet,false,2020-07-08,true,true,pedro@domain.com,true,2024-03-05,8300
-ExampleTitle6,2007,ExampleLocation6,NicolasMaquiavelo,true,2018-04-06,true,true,pedro@domain.com,true,2024-02-06,6700
-ExampleTitle5,2019,ExampleLocation5,PabloNeruda,false,2020-06-02,false,false,pedro@domain.com,false,2024-01-04,9000
-ExampleTitle4,2015,ExampleLocation4,FridaKahlo,false,2021-04-01,true,true,sofia@domain.com,false,2024-02-01,5000
-ExampleTitle3,2020,ExampleLocation3,LeonardodaVinci,false,2023-03-01,false,false,laura@domain.com,false,2024-02-05,7500
-ExampleTitle2,2023,ExampleLocation2,VincentvanGogh,false,2023-02-01,true,false,maria@domain.com,false,2024-03-09,4000
+titulo, duracion, calidad, altura, ancho
+ExampleTitle7,2016,FOTO,Paris,Pablo Picasso,1/06/2023,pedro@domain.com,false,false,false,false,true,false,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,15/01/2024,6000
+ExampleTitle,2022,VIDEO,Catalonia,Salvador Dali,8/05/2019,pedro@domain.com,false,false,false,false,false,false,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,,9500
+ExampleTitle6,2007,PINTURA,Milan,Leonardo da Vinci,9/02/2022,pedro@domain.com,false,false,false,false,false,false,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,,3000
+ExampleTitle9,2011,PINTURA,Venecia,Vincent van Gogh,18/06/2021,pedro@domain.com,false,false,false,false,false,false,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,,2000
+ExampleTitle8,2021,ESCULTURA,Florence,Leonardo da Vinci,1/09/2020,pedro@domain.com,false,false,false,false,false,false,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,,1200
+ExampleTitle5,2019,PINTURA,Monterrey,Frida Khalo,23/06/2014,maria@domain.com,false,false,false,false,false,false,maria@domain.com,maria@domain.com,maria@domain.com,maria@domain.com,,1500

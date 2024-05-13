@@ -1,6 +1,0 @@
-titulo,anio,tipo,lugarCreacion,autor,fechaConsignacion,propietarioEmail,exposicion,subasta,bloqueada,ventaAprobada,pagada,vendida,fechaVenta,precioVenta,valorInicial,valorMinimo,fechaLimite
-"The Starry Night",1889,painting,"Saint-Rémy-de-Provence",Vincent van Gogh,1889-06-18,example@example.com,"MoMA Exhibition 2024",false,false,false,true,true,2024-05-10,15500000,20000000,15000000,2024-05-15
-"Mona Lisa",1503,painting,"Florence",Leonardo da Vinci,1503-09-01,user@example.com,"Louvre Exhibition 2023",true,false,false,true,false,,0,100000000,50000000,2023-12-31
-"The Persistence of Memory",1931,painting,"Catalonia",Salvador Dalí,1931-05-08,owner@example.com,"Dalí Museum Exhibit 2025",false,false,true,true,true,2024-11-20,9500000,12000000,8000000,2024-12-15
-"Guernica",1937,painting,"Paris",Pablo Picasso,1937-06-01,collector@example.com,"Picasso Exhibition 2026",false,false,false,false,false,,0,80000000,60000000,2026-01-15
-"The Last Supper",1498,painting,"Milan",Leonardo da Vinci,1498-02-09,admin@example.com,"Vatican Exhibition 2025",false,true,true,true,true,2025-03-20,90000000,120000000,80000000,2025-03-31

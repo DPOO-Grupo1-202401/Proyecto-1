@@ -48,6 +48,7 @@ public class TestsProyecto {
 	Integer loadedPieces;
 	String login = "juan@domain.com";
 	String password = "123";
+	String dbTest = "db/Tests/"; 
 	Integer loadedUsers;
 	User userTest;
 	Role role;
@@ -61,8 +62,8 @@ public class TestsProyecto {
 
 	@BeforeEach
 	void setUp() throws Exception {
-		loadedUsers = userReader.loadUsers("db/Tests/");
-		loadedPieces = pieceReader.loadPieces("db/Tests/");
+		loadedUsers = userReader.loadUsers(dbTest);
+		loadedPieces = pieceReader.loadPieces(dbTest);
 
 		userTest =  UserReader.users.get(login);
 		
@@ -70,11 +71,11 @@ public class TestsProyecto {
 	
 	@Test
 	void testUserReader() throws FileNotFoundException, IOException {
-		assertFalse(userReader.sync("arcivoTest"));
+		assertFalse(userReader.sync(dbTest));
 	}
 	@Test
 	void testPieceReader() throws FileNotFoundException, IOException {
-		assertFalse(pieceReader.sync("arcivoTest"));
+		assertFalse(pieceReader.sync(dbTest));
 		
 	}
 	
@@ -138,9 +139,10 @@ public class TestsProyecto {
 	}
 	@Test
 	void testLoginController() {
-		assertTrue(loginController.login(login,password,new ArrayList<Role>()));
+		assertTrue(loginController.login(login,password,new ArrayList<Role>(Arrays.asList(Role.ADMINISTRADOR))));
 		assertFalse(loginController.login(null,password,null));
 	}
 
 }
+
 
