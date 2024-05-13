@@ -117,16 +117,23 @@ public class TestsProyecto {
 	
 	@Test 
 	void testPieceController() {
-		assertTrue(pieceController.aprobarVenta("Example Title 9"));
+		assertTrue(pieceController.aprobarVenta("ExampleTitle9"));
 		assertFalse(pieceController.aprobarVenta(null));
-		assertTrue(pieceController.denegarVenta("Example Title 2"));
+		assertTrue(pieceController.denegarVenta("ExampleTitle9"));
 		assertFalse(pieceController.denegarVenta(null));
-		assertTrue(pieceController.registrarPago("Example Title 2"));
+		assertTrue(pieceController.registrarPago("ExampleTitle8"));
 		assertFalse(pieceController.registrarPago(null));
-		assertTrue(pieceController.registrarVenta("Example Title 2"));
+		assertTrue(pieceController.registrarVenta("ExampleTitle8"));
 		assertFalse(pieceController.registrarVenta(null));
+		assertTrue(pieceController.registrarVenta("ExampleTitle8"));
+
 	}
 	
+	@Test
+	void testDenegarVenta1() {
+		Exception e = assertThrows(Exception.class, () -> pieceController.denegarVenta("ExampleTitle2"));
+		assertEquals("Error al sincronizar", e.getMessage());
+	}
 	@Test 
 	void testPieceController1() {
 		Exception e = assertThrows(Exception.class, () -> pieceController.comprarPieza(null,login,null));
@@ -134,7 +141,7 @@ public class TestsProyecto {
 	}
 	@Test
 	void testPieceController2() {
-		Exception e = assertThrows(Exception.class, () -> pieceController.comprarPieza("Example Title 2",login,null));
+		Exception e = assertThrows(Exception.class, () -> pieceController.comprarPieza("ExampleTitle2",login,null));
 		assertEquals("Error al sincronizar", e.getMessage());	
 	}
 	@Test

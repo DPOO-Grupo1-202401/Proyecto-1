@@ -1,7 +1,7 @@
 titulo, duracion, calidad, altura, ancho
-ExampleTitle7,2016,FOTO,Paris,Pablo Picasso,1/06/2023,pedro@domain.com,false,false,false,false,true,false,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,15/01/2024,6000
-ExampleTitle,2022,VIDEO,Catalonia,Salvador Dali,8/05/2019,pedro@domain.com,false,false,false,false,false,false,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,,9500
-ExampleTitle6,2007,PINTURA,Milan,Leonardo da Vinci,9/02/2022,pedro@domain.com,false,false,false,false,false,false,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,,3000
-ExampleTitle9,2011,PINTURA,Venecia,Vincent van Gogh,18/06/2021,pedro@domain.com,false,false,false,false,false,false,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,,2000
-ExampleTitle8,2021,ESCULTURA,Florence,Leonardo da Vinci,1/09/2020,pedro@domain.com,false,false,false,false,false,false,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,,1200
-ExampleTitle5,2019,PINTURA,Monterrey,Frida Khalo,23/06/2014,maria@domain.com,false,false,false,false,false,false,maria@domain.com,maria@domain.com,maria@domain.com,maria@domain.com,,1500
+ExampleTitle7,2016,FOTO,Paris,Pablo Picasso,1/06/2023,pedro@domain.com,false,false,false,false,true,false,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com
+ExampleTitle,2022,VIDEO,Catalonia,Salvador Dali,8/05/2019,pedro@domain.com,false,false,false,false,false,false,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com
+ExampleTitle6,2007,PINTURA,Milan,Leonardo da Vinci,9/02/2022,pedro@domain.com,false,false,false,false,false,false,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com
+ExampleTitle9,2011,PINTURA,Venecia,Vincent van Gogh,18/06/2021,pedro@domain.com,false,false,false,false,false,false,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com
+ExampleTitle8,2021,ESCULTURA,Florence,Leonardo da Vinci,1/09/2020,pedro@domain.com,false,false,false,false,false,false,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com
+ExampleTitle5,2019,PINTURA,Monterrey,Frida Khalo,23/06/2014,maria@domain.com,false,false,false,false,false,false,maria@domain.com,maria@domain.com,maria@domain.com,maria@domain.com,maria@domain.com,maria@domain.com
