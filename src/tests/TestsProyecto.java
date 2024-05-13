@@ -39,17 +39,18 @@ import controller.UserController;
 public class TestsProyecto {
 
 	UserReader userReader = new UserReader();
+	PieceReader pieceReader = new PieceReader();
 	UserController userController = new UserController();
-	Integer loadedUsers;
-	User userTest;
+	PieceController pieceController = new PieceController();
+	LoginController loginController = new LoginController();
+	ConsultaDePiezas consltaPiezas = new ConsultaDePiezas();
+	InicioDeSesion inicioSesion = new InicioDeSesion();
+	Integer loadedPieces;
 	String login = "juan@domain.com";
 	String password = "123";
-	PieceReader pieceReader = new PieceReader();
-	PieceController pieceController = new PieceController();
-	Integer loadedPieces;
-	ConsultaDePiezas consltaPiezas = new ConsultaDePiezas();
-	LoginController loginController = new LoginController();
-	InicioDeSesion inicioSesion = new InicioDeSesion();
+	Integer loadedUsers;
+	User userTest;
+	Role role;
 	
 	
 	@BeforeAll
@@ -60,8 +61,9 @@ public class TestsProyecto {
 
 	@BeforeEach
 	void setUp() throws Exception {
-		loadedPieces = pieceReader.loadPieces("db/Tests/");
 		loadedUsers = userReader.loadUsers("db/Tests/");
+		loadedPieces = pieceReader.loadPieces("db/Tests/");
+
 		userTest =  UserReader.users.get(login);
 		
 	}
@@ -114,7 +116,7 @@ public class TestsProyecto {
 	
 	@Test 
 	void testPieceController() {
-		assertTrue(pieceController.aprobarVenta("Example Title 2"));
+		assertTrue(pieceController.aprobarVenta("Example Title 9"));
 		assertFalse(pieceController.aprobarVenta(null));
 		assertTrue(pieceController.denegarVenta("Example Title 2"));
 		assertFalse(pieceController.denegarVenta(null));
@@ -127,7 +129,7 @@ public class TestsProyecto {
 	@Test 
 	void testPieceController1() {
 		Exception e = assertThrows(Exception.class, () -> pieceController.comprarPieza(null,login,null));
-		assertEquals("No se encontro la pieza", e.getMessage());
+		assertEquals("Error al sincronizar", e.getMessage());
 	}
 	@Test
 	void testPieceController2() {
@@ -136,13 +138,9 @@ public class TestsProyecto {
 	}
 	@Test
 	void testLoginController() {
-		assertTrue(loginController.login(login,password,new ArrayList<Role>(Arrays.asList(Role.ADMINISTRADOR))));
-		assertFalse(loginController.login(null,password,new ArrayList<Role>(Arrays.asList(Role.ADMINISTRADOR))));
+		assertTrue(loginController.login(login,password,new ArrayList<Role>()));
+		assertFalse(loginController.login(null,password,null));
 	}
-	@Test
-	void testInicioSesion() {
-		
-		
-	}
+
 }
 

@@ -128,6 +128,7 @@ public class PieceReader {
             //         p.getPrecioVenta(), p.getValorInicial(), p.getValorMinimo(), p.getFechaLimite(), material, altura,
             //         ancho, profundidad, peso);
             Escultura escultura = (Escultura) pieces.get(titulo);
+
             escultura.setMaterial(material);
             escultura.setAltura(altura);
             escultura.setAncho(ancho);
@@ -173,6 +174,7 @@ public class PieceReader {
                             propietario, exposicion, subasta, bloqueada, aprobada, pagada, vendida, fechaVenta,
                             precioVenta, valorInicial, valorMinimo, fechaLimite);
                     pieces.put(titulo, escultura);
+
                     break;
                 case "FOTO":
                     // AGREGAR CAMPOS FALTANTES
@@ -180,13 +182,16 @@ public class PieceReader {
                             exposicion, subasta, bloqueada, aprobada, pagada, vendida, fechaVenta, precioVenta,
                             valorInicial, valorMinimo, fechaLimite);
                     pieces.put(titulo, foto);
+
                     break;
                 case "PINTURA":
                     // AGREGAR CAMPOS FALTANTES
                     Pintura pintura = new Pintura(titulo, anio, tipo, lugarCreacion, autor, fechaConsignacion,
                             propietario, exposicion, subasta, bloqueada, aprobada, pagada, vendida, fechaVenta,
                             precioVenta, valorInicial, valorMinimo, fechaLimite);
-                    pieces.put(titulo, pintura);
+                    pieces.put(titulo, pintura);            
+
+                    
                     break;
 
                 case "VIDEO":

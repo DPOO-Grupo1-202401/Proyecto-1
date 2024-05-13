@@ -31,16 +31,14 @@ public class UserReader {
             String nombre = partes[2].strip();
             String numeroTelefono = partes[3].strip();
             String role = partes[4].strip();
-
-            User user = new User(login, password, nombre, numeroTelefono, Role.valueOf(role));
             
+            User user = new User(login, password, nombre, numeroTelefono, Role.valueOf(role));
             users.put(login, user);
 
             line = br.readLine();
                 
 		}
 		br.close();
-		
 		return users.size();
     }
     
