@@ -12,7 +12,7 @@ import model.User;
 public class LoginController {
 	
 
-    public boolean login(String login, String password, ArrayList<Role> roles) {
+    public static boolean login(String login, String password, ArrayList<Role> roles) {
         HashMap<String, User> users =  UserReader.users;
         if(users.containsKey(login)) {
             User user = users.get(login);

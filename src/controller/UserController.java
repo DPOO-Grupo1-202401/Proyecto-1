@@ -14,7 +14,7 @@ public class UserController {
         return UserReader.users;
     }
 
-    public User getUser(String email) {
+    public static User getUser(String email) {
         return UserReader.users.get(email);
     }
     

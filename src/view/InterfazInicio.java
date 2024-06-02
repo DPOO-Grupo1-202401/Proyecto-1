@@ -16,14 +16,15 @@ import model.Role;
 
 public class InterfazInicio {
 
-    public static void main(String[] args) throws FileNotFoundException, IOException {
+    //public static void main(String[] args) throws FileNotFoundException, IOException {
 
-        InterfazInicio consola = new InterfazInicio();
-        consola.cargarDB();
-        consola.ejecutarOpcion();
+     //   InterfazInicio consola = new InterfazInicio();
+     //   consola.cargarDB();
+     //   consola.ejecutarOpcion();
         
 
-    }
+    //}
+    
 
     public void cargarDB() {
         try {
