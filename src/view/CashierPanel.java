@@ -20,7 +20,7 @@ public class CashierPanel extends JPanel {
 
         GridBagConstraints constraints = new GridBagConstraints();
 
-        JPanel panel = new JPanel(new GridBagLayout());
+        
 
         // Botón "Ver piezas"
         viewPiecesButton = new JButton("Ver piezas");
@@ -29,37 +29,37 @@ public class CashierPanel extends JPanel {
         constraints.gridx = 0;
         constraints.gridy = 0;
         constraints.insets = new Insets(10, 10, 10, 10);
-        panel.add(viewPiecesButton, constraints);
+        this.add(viewPiecesButton, constraints);
 
         // Botón "Ver ofertas de compra"
         viewPurchaseOffersButton = new JButton("Ver ofertas de compra");
         viewPurchaseOffersButton.addActionListener(new ViewPurchaseOffersButtonListener());
 
         constraints.gridy = 1;
-        panel.add(viewPurchaseOffersButton, constraints);
+        this.add(viewPurchaseOffersButton, constraints);
 
         // Botón "Registrar Pago"
         registerPaymentButton = new JButton("Registrar Pago");
         registerPaymentButton.addActionListener(new RegisterPaymentButtonListener());
 
         constraints.gridy = 2;
-        panel.add(registerPaymentButton, constraints);
+        this.add(registerPaymentButton, constraints);
 
         // Botón "Ver piezas de un artista"
         viewArtistPiecesButton = new JButton("Ver piezas de un artista");
         viewArtistPiecesButton.addActionListener(new ViewArtistPiecesButtonListener());
 
         constraints.gridy = 3;
-        panel.add(viewArtistPiecesButton, constraints);
+        this.add(viewArtistPiecesButton, constraints);
 
         // Botón "Salir"
         exitButton = new JButton("Salir");
         exitButton.addActionListener(new ExitButtonListener());
 
         constraints.gridy = 4;
-        panel.add(exitButton, constraints);
+        this.add(exitButton, constraints);
 
-        add(panel, BorderLayout.CENTER);
+        
     }
 
     private class ViewPiecesButtonListener implements ActionListener {

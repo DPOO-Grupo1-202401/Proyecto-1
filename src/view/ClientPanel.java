@@ -1,4 +1,5 @@
 package view;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -15,12 +16,12 @@ public class ClientPanel extends JPanel {
 
     public ClientPanel(ArtGalleryLogin parentFrame) {
         this.parentFrame = parentFrame;
-        setLayout(new GridBagLayout());
+        
 
+       
+        
+        JPanel panel = new JPanel(new FlowLayout());
         GridBagConstraints constraints = new GridBagConstraints();
-
-        // Crear el panel
-        JPanel panel = new JPanel(new GridBagLayout());
 
         // Botón "Consultar inventario de la galería"
         inventoryButton = new JButton("Consultar inventario de la galería");
@@ -56,10 +57,9 @@ public class ClientPanel extends JPanel {
         sessionButton = new JButton("Cerrar sesión");
         sessionButton.addActionListener(new SessionButtonListener());
 
+        constraints.gridx = 0;
         constraints.gridy = 4;
         panel.add(sessionButton, constraints);
-
-        add(panel, BorderLayout.CENTER);
     }
 
     private class InventoryButtonListener implements ActionListener {

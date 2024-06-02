@@ -15,174 +15,178 @@ import java.util.Arrays;
 
 public class ArtGalleryLogin extends JFrame {
 
-    private JButton clientButton;
-    private JButton employeeButton;
-    private JButton adminButton;
-    private JButton exitButton;
-    
-    
+	private JButton clientButton;
+	private JButton employeeButton;
+	private JButton adminButton;
+	private JButton exitButton;
 
-    
-    public void cargarDB() {
-        try {
-        	
-            UserReader userReader = new UserReader();
-            PieceReader pieceReader = new PieceReader();
-            PasarelasReader pasarelasReader = new PasarelasReader();
-            PurchasesReader purchasesReader = new PurchasesReader();
 
-            Integer loadedPasarelas = pasarelasReader.loadPasarelas("db/");
-            Integer loadedUsers = userReader.loadUsers("db/");
-            Integer loadedPieces = pieceReader.loadPieces("db/");
-            Integer loadedCompras = purchasesReader.loadCompras("db/");
-           
-        } catch (Exception e) {
-            
-            e.printStackTrace();
-        }
-    }
-    
-    public ArtGalleryLogin() {
-        setTitle("Autenticacion Galeria de Arte ");
-        setSize(400, 300);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
 
-        // Crear el panel de botones
-        JPanel panel = new JPanel(new GridBagLayout());
-        GridBagConstraints constraints = new GridBagConstraints();
 
-        // Botón "Iniciar como cliente"
-        clientButton = new JButton("Iniciar como cliente");
-        clientButton.addActionListener(new ClientButtonListener());
+	public void cargarDB() {
+		try {
 
-        constraints.gridx = 0;
-        constraints.gridy = 0;
-        constraints.insets = new Insets(10, 10, 10, 10);
-        panel.add(clientButton, constraints);
+			UserReader userReader = new UserReader();
+			PieceReader pieceReader = new PieceReader();
+			PasarelasReader pasarelasReader = new PasarelasReader();
+			PurchasesReader purchasesReader = new PurchasesReader();
 
-        // Botón "Iniciar como empleado"
-        employeeButton = new JButton("Iniciar como empleado");
-        employeeButton.addActionListener(new EmployeeButtonListener());
+			Integer loadedPasarelas = pasarelasReader.loadPasarelas("db/");
+			Integer loadedUsers = userReader.loadUsers("db/");
+			Integer loadedPieces = pieceReader.loadPieces("db/");
+			Integer loadedCompras = purchasesReader.loadCompras("db/");
 
-        constraints.gridy = 1;
-        panel.add(employeeButton, constraints);
+		} catch (Exception e) {
 
-        // Botón "Iniciar como administrador"
-        adminButton = new JButton("Iniciar como administrador");
-        adminButton.addActionListener(new AdminButtonListener());
+			e.printStackTrace();
+		}
+	}
 
-        constraints.gridy = 2;
-        panel.add(adminButton, constraints);
+	public ArtGalleryLogin() {
+		setTitle("Art Gallery Authentication");
+		setSize(400, 300);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
 
-        // Botón "Salir"
-        exitButton = new JButton("Salir");
-        exitButton.addActionListener(new ExitButtonListener());
+		// Crear el panel de botones
+		JPanel panel = new JPanel(new GridBagLayout());
+		GridBagConstraints constraints = new GridBagConstraints();
 
-        constraints.gridy = 3;
-        panel.add(exitButton, constraints);
+		// Botón "Iniciar como cliente"
+		clientButton = new JButton("Iniciar como cliente");
+		clientButton.addActionListener(new ClientButtonListener());
 
-        // Agregar el panel de botones al JFrame
-        add(panel, BorderLayout.CENTER);
-    }
+		constraints.gridx = 0;
+		constraints.gridy = 0;
+		constraints.insets = new Insets(10, 10, 10, 10);
+		panel.add(clientButton, constraints);
 
-    private class ClientButtonListener implements ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            showAuthenticationPanel(new ArrayList<Role>(Arrays.asList(Role.CLIENTE)));
-            
-        }
-    }
+		// Botón "Iniciar como empleado"
+		employeeButton = new JButton("Iniciar como empleado");
+		employeeButton.addActionListener(new EmployeeButtonListener());
 
-    private class EmployeeButtonListener implements ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            showAuthenticationPanel(new ArrayList<Role>(Arrays.asList(Role.CAJERO, Role.OPERADOR)));
-            
-        }
-    }
+		constraints.gridy = 1;
+		panel.add(employeeButton, constraints);
 
-    private class AdminButtonListener implements ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            showAuthenticationPanel(new ArrayList<Role>(Arrays.asList(Role.ADMINISTRADOR)));
-            
-        }
-    }
+		// Botón "Iniciar como administrador"
+		adminButton = new JButton("Iniciar como administrador");
+		adminButton.addActionListener(new AdminButtonListener());
 
-    private class ExitButtonListener implements ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            System.exit(0);
-        }
-    }
+		constraints.gridy = 2;
+		panel.add(adminButton, constraints);
 
-    private void showAuthenticationPanel(ArrayList<Role> roles) {
-        getContentPane().removeAll();
-        add(new AuthenticationPanel(this, roles), BorderLayout.CENTER);
-        revalidate();
-        repaint();
-    }
-    public void showClientPanel() {
-        getContentPane().removeAll();
-        add(new ClientPanel(this), BorderLayout.CENTER);
-        revalidate();
-        repaint();
-    }
-    public void showOperatorPanel() {
-        getContentPane().removeAll();
-        add(new OperatorPanel(this), BorderLayout.CENTER);
-        revalidate();
-        repaint();
-    }
-    public void showCashierPanel() {
-        getContentPane().removeAll();
-        add(new CashierPanel(this), BorderLayout.CENTER);
-        revalidate();
-        repaint();
-    }
-    public void showAdminPanel() {
-        getContentPane().removeAll();
-        add(new AdminPanel(this), BorderLayout.CENTER);
-        revalidate();
-        repaint();
-    }
+		// Botón "Salir"
+		exitButton = new JButton("Salir");
+		exitButton.addActionListener(new ExitButtonListener());
 
-    public void showMainMenu() {
-        getContentPane().removeAll();
-        setLayout(new GridBagLayout());
-        GridBagConstraints constraints = new GridBagConstraints();
+		constraints.gridy = 3;
+		panel.add(exitButton, constraints);
 
-        JPanel panel = new JPanel(new GridBagLayout());
+		// Agregar el panel de botones al JFrame
+		add(panel, BorderLayout.CENTER);
+	}
 
-        constraints.gridx = 0;
-        constraints.gridy = 0;
-        constraints.insets = new Insets(10, 10, 10, 10);
-        panel.add(clientButton, constraints);
+	private class ClientButtonListener implements ActionListener {
+		@Override
+		public void actionPerformed(ActionEvent e) {
+		showAuthenticationPanel(new ArrayList<Role>(Arrays.asList(Role.CLIENTE)));
+		}
+	}
 
-        constraints.gridy = 1;
-        panel.add(employeeButton, constraints);
+	private class EmployeeButtonListener implements ActionListener {
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			showAuthenticationPanel(new ArrayList<Role>(Arrays.asList(Role.CAJERO, Role.OPERADOR)));
 
-        constraints.gridy = 2;
-        panel.add(adminButton, constraints);
+		}
+	}
 
-        constraints.gridy = 3;
-        panel.add(exitButton, constraints);
+	private class AdminButtonListener implements ActionListener {
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			showAuthenticationPanel(new ArrayList<Role>(Arrays.asList(Role.ADMINISTRADOR)));
 
-        add(panel, BorderLayout.CENTER);
-        revalidate();
-        repaint();
-    }
+		}
+	}
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new ArtGalleryLogin().setVisible(true);
-                ArtGalleryLogin inicio = new ArtGalleryLogin(); 
-                inicio.cargarDB();
-                
-            }
-        });
-    }
-}
+
+	private class ExitButtonListener implements ActionListener {
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			System.exit(0);
+		}
+	}
+
+
+	public void showMainMenu() {
+		getContentPane().removeAll();
+		setLayout(new GridBagLayout());
+		GridBagConstraints constraints = new GridBagConstraints();
+
+		JPanel panel = new JPanel(new GridBagLayout());
+
+		constraints.gridx = 0;
+		constraints.gridy = 0;
+		constraints.insets = new Insets(10, 10, 10, 10);
+		panel.add(clientButton, constraints);
+
+		constraints.gridy = 1;
+		panel.add(employeeButton, constraints);
+
+		constraints.gridy = 2;
+		panel.add(adminButton, constraints);
+
+		constraints.gridy = 3;
+		panel.add(exitButton, constraints);
+
+		add(panel, BorderLayout.CENTER);
+		revalidate();
+		repaint();
+	}
+
+
+
+	private void showAuthenticationPanel(ArrayList<Role> roles) {
+		getContentPane().removeAll();
+		AuthenticationPanel authPanel = new AuthenticationPanel(this,roles);
+		add(authPanel, BorderLayout.CENTER);
+		revalidate();
+		repaint();
+	}
+
+	public void showOperatorPanel() {
+		getContentPane().removeAll();
+		add(new OperatorPanel(this), BorderLayout.CENTER);
+		revalidate();
+		repaint();
+	}
+	public void showCashierPanel() {
+		getContentPane().removeAll();
+		add(new CashierPanel(this), BorderLayout.CENTER);
+		revalidate();
+		repaint();
+	}
+	public void showAdminPanel() {
+		getContentPane().removeAll();
+		add(new AdminPanel(this), BorderLayout.CENTER);
+		revalidate();
+		repaint();
+	}
+	void showClientPanel() {
+		getContentPane().removeAll();
+		ClientPanel cliPanel = new ClientPanel(this);
+		add(cliPanel, BorderLayout.CENTER);
+		revalidate();
+		repaint();
+	}
+
+	public static void main(String[] args) {
+		SwingUtilities.invokeLater(new Runnable() {
+			@Override
+			public void run() {
+				new ArtGalleryLogin().setVisible(true);
+				ArtGalleryLogin inicio = new ArtGalleryLogin(); 
+				inicio.cargarDB();
+			}
+		});
+	}}

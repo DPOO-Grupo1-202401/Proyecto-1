@@ -69,37 +69,37 @@ public class AdminPanel extends JPanel {
         denyOfferButton.addActionListener(new DenyOfferButtonListener());
 
         constraints.gridy = 5;
-        panel.add(denyOfferButton, constraints);
+        add(denyOfferButton, constraints);
 
         // Botón "Registrar pieza vendida"
         registerSoldPieceButton = new JButton("Registrar pieza vendida");
         registerSoldPieceButton.addActionListener(new RegisterSoldPieceButtonListener());
 
         constraints.gridy = 6;
-        panel.add(registerSoldPieceButton, constraints);
+        add(registerSoldPieceButton, constraints);
 
         // Botón "Ver piezas de un artista"
         viewArtistPiecesButton = new JButton("Ver piezas de un artista");
         viewArtistPiecesButton.addActionListener(new ViewArtistPiecesButtonListener());
 
         constraints.gridy = 7;
-        panel.add(viewArtistPiecesButton, constraints);
+        add(viewArtistPiecesButton, constraints);
 
         // Botón "Ver piezas de un comprador"
         viewBuyerPiecesButton = new JButton("Ver piezas de un comprador");
         viewBuyerPiecesButton.addActionListener(new ViewBuyerPiecesButtonListener());
 
         constraints.gridy = 8;
-        panel.add(viewBuyerPiecesButton, constraints);
+        add(viewBuyerPiecesButton, constraints);
 
         // Botón "Salir"
         exitButton = new JButton("Salir");
         exitButton.addActionListener(new ExitButtonListener());
 
         constraints.gridy = 9;
-        panel.add(exitButton, constraints);
+        add(exitButton, constraints);
 
-        add(panel, BorderLayout.CENTER);
+
     }
 
     private class ViewPiecesButtonListener implements ActionListener {

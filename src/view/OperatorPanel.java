@@ -19,7 +19,6 @@ public class OperatorPanel extends JPanel {
 
         GridBagConstraints constraints = new GridBagConstraints();
 
-        JPanel panel = new JPanel(new GridBagLayout());
 
         // Botón "Ver piezas"
         viewPiecesButton = new JButton("Ver piezas");
@@ -28,30 +27,30 @@ public class OperatorPanel extends JPanel {
         constraints.gridx = 0;
         constraints.gridy = 0;
         constraints.insets = new Insets(10, 10, 10, 10);
-        panel.add(viewPiecesButton, constraints);
+        add(viewPiecesButton, constraints);
 
         // Botón "Registrar oferta"
         registerOfferButton = new JButton("Registrar oferta");
         registerOfferButton.addActionListener(new RegisterOfferButtonListener());
 
         constraints.gridy = 1;
-        panel.add(registerOfferButton, constraints);
+        add(registerOfferButton, constraints);
 
         // Botón "Ver piezas de un artista"
         viewArtistPiecesButton = new JButton("Ver piezas de un artista");
         viewArtistPiecesButton.addActionListener(new ViewArtistPiecesButtonListener());
 
         constraints.gridy = 2;
-        panel.add(viewArtistPiecesButton, constraints);
+        add(viewArtistPiecesButton, constraints);
 
         // Botón "Salir"
         exitButton = new JButton("Salir");
         exitButton.addActionListener(new ExitButtonListener());
 
         constraints.gridy = 3;
-        panel.add(exitButton, constraints);
+        add(exitButton, constraints);
 
-        add(panel, BorderLayout.CENTER);
+
     }
 
     private class ViewPiecesButtonListener implements ActionListener {

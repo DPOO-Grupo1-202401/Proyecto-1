@@ -97,7 +97,7 @@ public class AuthenticationPanel extends JPanel {
                     default:
                         break;
                 }
-                // Aquí puedes agregar la lógica para abrir la galería de arte
+                
                 parentFrame.showMainMenu();
             } else {
                 JOptionPane.showMessageDialog(AuthenticationPanel.this, "Invalid username or password", "Error", JOptionPane.ERROR_MESSAGE);

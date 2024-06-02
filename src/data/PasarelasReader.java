@@ -39,7 +39,7 @@ public class PasarelasReader {
 				pasarela = (Pasarela) clase.getDeclaredConstructor(null).newInstance(null);
 				pasarelas.put(pasarela.getNombre(),pasarela);
 				
-				System.out.println("Se cargó correctamente la pasarela de pago " + pasarela.getNombre() + " de manera dinámica.");
+				//System.out.println("Se cargó correctamente la pasarela de pago " + pasarela.getNombre() + " de manera dinámica.");
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
