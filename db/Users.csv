@@ -1,4 +1,4 @@
-[Ljava.lang.String;@16b4a017
+Email, password, nombre, telefono, rol
 miguel@domain.com,password987,miguel,9999999999,CLIENTE
 laura@domain.com,passwordxyz,laura,1111111111,CLIENTE
 sara@domain.com,password654,sara,8888888888,CAJERO

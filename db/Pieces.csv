@@ -1,7 +1,8 @@
-titulo, duracion, calidad, altura, ancho
-ExampleTitle7,2016,FOTO,Paris,Pablo Picasso,1/06/2023,pedro@domain.com,false,false,false,false,true,false,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com
-ExampleTitle,2022,VIDEO,Catalonia,Salvador Dali,8/05/2019,pedro@domain.com,false,false,false,false,false,false,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com
-ExampleTitle6,2007,PINTURA,Milan,Leonardo da Vinci,9/02/2022,pedro@domain.com,false,false,false,false,false,false,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com
-ExampleTitle9,2011,PINTURA,Venecia,Vincent van Gogh,18/06/2021,pedro@domain.com,false,false,false,false,false,false,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com
-ExampleTitle8,2021,ESCULTURA,Florence,Leonardo da Vinci,1/09/2020,pedro@domain.com,false,false,false,false,true,true,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com,pedro@domain.com
-ExampleTitle5,2019,PINTURA,Monterrey,Frida Khalo,23/06/2014,maria@domain.com,false,false,false,false,false,false,maria@domain.com,maria@domain.com,maria@domain.com,maria@domain.com,maria@domain.com,maria@domain.com
+Titulo, Anio, Tipo, LugarCreacion, Autor,FechaConsignacion, PropietarioEmail,Exposicion,Subasta,Bloqueada,VentaAprobada,Pagada,Vendida,FechaVenta,PrecioVenta,ValorInicial,ValorMinimo,FechaLimite
+Corazon de Voh,2016,FOTO,Paris,Pablo Picasso,1/06/2023,pedro@domain.com,false,false,false,false,true,false,2024-01-15,6000,5000,6200,2025-01-15
+Vida Marina,2022,VIDEO,Catalonia,Salvador Dali,8/05/2019,pedro@domain.com,false,false,true,false,false,false,2024-01-15,6000,5000,6200,2025-01-15
+Mona Lisa,2007,PINTURA,Milan,Leonardo da Vinci,9/02/2022,pedro@domain.com,true,true,false,false,false,false,2024-01-15,6000,2000,5000,2025-01-15
+Guernica,2011,PINTURA,Venecia,Vincent van Gogh,18/06/2021,pedro@domain.com,false,false,false,false,true,true,2024-01-15,6000,5000,6200,2025-01-15
+Baco,2021,ESCULTURA,Florence,Miguel Angel,1/09/2020,pedro@domain.com,false,false,false,false,true,true,2024-02-21,8000,5000,6200,2025-02-21
+Las dos Fridas,2019,PINTURA,Monterrey,Frida Khalo,23/06/2014,maria@domain.com,true,true,false,false,false,false,2024-01-15,2500,1000,3000,2025-09-08
+El Marco,2019,PINTURA,Monterrey,Frida Khalo,23/06/2014,maria@domain.com,false,false,false,false,true,true,2024-02-27,7500,5000,6200,2025-02-27

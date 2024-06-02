@@ -129,7 +129,6 @@ public class PieceReader {
 			//         p.getPrecioVenta(), p.getValorInicial(), p.getValorMinimo(), p.getFechaLimite(), material, altura,
 			//         ancho, profundidad, peso);
 			Escultura escultura = (Escultura) pieces.get(titulo);
-
 			escultura.setMaterial(material);
 			escultura.setAltura(altura);
 			escultura.setAncho(ancho);

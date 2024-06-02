@@ -1,12 +1,14 @@
 package view;
 
+import java.util.Date;
+
 import controller.PieceController;
 import controller.PurchaseController;
 import model.Purchase;
 import model.Role;
+import model.TipoPagoEnum;
 import model.User;
 import util.Utils;
-
 
 public class InterfazCajero {
     private ConsultaDePiezas consultaDePiezas = new ConsultaDePiezas();
@@ -31,11 +33,37 @@ public class InterfazCajero {
                     consultaDePiezas.consultarPiezasBloqueadas();
                     break;
                 case 3:
-                	// Ingresar nuevo usuario
+                // Ingresar nuevo usuario
                 {
-                	Purchase purchase= new Purchase("Solaris","maria@domain.com","3000","efectivo","2024-05-12");
-                	String pieza="Solaris";
-                	purchaseController.agregarPurchase(pieza, purchase);
+                    // private String pieza;
+                    // private String comprador;
+                    // private String precio;
+                    // private TipoPagoEnum tipoPago;
+                    // private String fecha;
+
+                    String pieza = Utils.input("Ingrese el titulo de la pieza");
+                    String comprador = Utils.input("Ingrese el email del comprador");
+                    String precio = Utils.input("Ingrese el precio de la pieza");
+                    TipoPagoEnum tipoPago = null;
+                    System.out.println("Tipos de pago:");
+                    for (TipoPagoEnum tipo : TipoPagoEnum.values()) {
+                        System.out.println(tipo.toString());
+                    }
+                    while (tipoPago == null) {
+                        try {
+                            tipoPago = TipoPagoEnum.valueOf(Utils.input("Ingrese el tipo de pago"));
+                        } catch (Exception e) {
+                            System.out.println("Tipo de pago no valido");
+                            tipoPago = null;
+                            e.printStackTrace();
+                        }
+                    }
+
+                    String fecha = new Date().toString();
+
+                    Purchase purchase = new Purchase(pieza, comprador, tipoPago, fecha, precio);
+
+                    purchaseController.agregarPurchase(pieza, purchase);
                 }
                     break;
                 case 4:
@@ -52,4 +80,3 @@ public class InterfazCajero {
     }
 
 }
-

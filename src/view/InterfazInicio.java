@@ -8,7 +8,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import view.InicioDeSesion;
 import util.Utils;
+import data.PasarelasReader;
 import data.PieceReader;
+import data.PurchasesReader;
 import data.UserReader;
 import model.Role;
 
@@ -25,14 +27,21 @@ public class InterfazInicio {
 
     public void cargarDB() {
         try {
+        	
             UserReader userReader = new UserReader();
             PieceReader pieceReader = new PieceReader();
+            PasarelasReader pasarelasReader = new PasarelasReader();
+            PurchasesReader purchasesReader = new PurchasesReader();
 
+            Integer loadedPasarelas = pasarelasReader.loadPasarelas("db/");
+            System.out.println("Se cargaron " + loadedPasarelas + " pasarelas");
             Integer loadedUsers = userReader.loadUsers("db/");
             System.out.println("Se cargaron " + loadedUsers + " usuarios");
             Integer loadedPieces = pieceReader.loadPieces("db/");
             System.out.println("Se cargaron " + loadedPieces + " piezas");
-
+            Integer loadedCompras = purchasesReader.loadCompras("db/");
+            System.out.println("Se cargaron " + loadedCompras + " compras");
+            
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
             e.printStackTrace();

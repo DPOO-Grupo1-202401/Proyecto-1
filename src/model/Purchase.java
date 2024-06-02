@@ -4,8 +4,16 @@ public class Purchase {
     private String pieza;
     private String comprador;
     private String precio;
-    private String tipoPago;
+    private TipoPagoEnum tipoPago;
     private String fecha;
+
+    public Purchase(String pieza, String comprador, TipoPagoEnum tipoPago, String fecha, String precio) {   
+        this.pieza = pieza;
+        this.comprador = comprador;
+        this.tipoPago = tipoPago;
+        this.fecha = fecha;
+        this.precio = precio;
+    }
 
 
     public String getPieza() {
@@ -32,11 +40,11 @@ public class Purchase {
         this.precio = precio;
     }
 
-    public String getTipoPago() {
+    public TipoPagoEnum getTipoPago() {
         return tipoPago;
     }
 
-    public void setTipoPago(String tipoPago) {
+    public void setTipoPago(TipoPagoEnum tipoPago) {
         this.tipoPago = tipoPago;
     }
 
@@ -46,14 +54,5 @@ public class Purchase {
 
     public void setFecha(String fecha) {
         this.fecha = fecha;
-    }
-
-
-    public Purchase(String pieza, String comprador, String tipoPago, String fecha, String precio) {   
-        this.pieza = pieza;
-        this.comprador = comprador;
-        this.tipoPago = tipoPago;
-        this.fecha = fecha;
-        this.precio = precio;
     }
 }
