@@ -5,7 +5,7 @@ import util.Utils;
 
 public class InterfazCliente {
 
-    private ConsultaDePiezas consultaDePiezas = new ConsultaDePiezas();
+    //private ConsultaDePiezasGUI consultaDePiezas = new ConsultaDePiezasGUI();
     private PieceController pieceController = new PieceController();
 
     public void mostrarOpciones() {
@@ -26,7 +26,7 @@ public class InterfazCliente {
             switch (opcionSeleccionada) {
                 case 1:
                     // Consultar inventario de la galeria
-                    consultaDePiezas.consultarPiezas();
+                   // consultaDePiezas.consultarPiezas();
                     break;
                 case 2:
                 	// Comprar pieza
@@ -34,14 +34,14 @@ public class InterfazCliente {
                     break;
                 case 3:
                     // Consultar piezas propias en venta
-                	consultaDePiezas.consultarPiezasPropietario(Utils.input("Ingrese su email"));
+                	//consultaDePiezas.consultarPiezasPropietario(Utils.input("Ingrese su email"));
                     break;//pedro@domain.com
                 case 4:
                     // Consultar mis piezas compradas
-                	consultaDePiezas.consultarPiezasPropietario(Utils.input("Ingrese su email"));
+                	//consultaDePiezas.consultarPiezasPropietario(Utils.input("Ingrese su email"));
                     break;
                 case 5:
-                    consultaDePiezas.consultarPiezasArtista(Utils.input("Ingrese nombre del artista"));
+                    //consultaDePiezas.consultarPiezasArtista(Utils.input("Ingrese nombre del artista"));
                     break;
                 case 6:
                     continuar = false;

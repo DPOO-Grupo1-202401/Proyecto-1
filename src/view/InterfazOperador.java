@@ -39,7 +39,7 @@ public class InterfazOperador {
                 }
                     break;
                 case 3:
-                    consultaDePiezas.consultarPiezasArtista(Utils.input("Ingrese nombre del artista"));
+                  //  consultaDePiezas.consultarPiezasArtista());
                     break;
                 
                 case 4:

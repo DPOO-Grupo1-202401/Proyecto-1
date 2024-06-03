@@ -1,12 +1,12 @@
 package view;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
-import view.InicioDeSesion;
+
 import util.Utils;
 import data.PasarelasReader;
 import data.PieceReader;
@@ -14,86 +14,103 @@ import data.PurchasesReader;
 import data.UserReader;
 import model.Role;
 
-public class InterfazInicio {
+public class InterfazInicio extends JFrame {
 
-    //public static void main(String[] args) throws FileNotFoundException, IOException {
-
-     //   InterfazInicio consola = new InterfazInicio();
-     //   consola.cargarDB();
-     //   consola.ejecutarOpcion();
-        
-
-    //}
+    private JButton btnCliente;
+    private JButton btnEmpleado;
+    private JButton btnAdmin;
+    private JButton btnSalir;
+    private JTextArea textArea;
     
-
+    public InterfazInicio() {
+        setTitle("Sistema de la Galeria");
+        setSize(500, 400);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        
+        // Crear componentes
+        btnCliente = new JButton("Iniciar sesión como cliente");
+        btnEmpleado = new JButton("Iniciar sesión como empleado");
+        btnAdmin = new JButton("Iniciar sesión como administrador");
+        btnSalir = new JButton("Salir de la aplicación");
+        textArea = new JTextArea(10, 40);
+        textArea.setEditable(false);
+        
+        // Panel de botones
+        JPanel panelBotones = new JPanel();
+        panelBotones.setLayout(new GridLayout(4, 1));
+        panelBotones.add(btnCliente);
+        panelBotones.add(btnEmpleado);
+        panelBotones.add(btnAdmin);
+        panelBotones.add(btnSalir);
+        
+        // Panel principal
+        JPanel panelPrincipal = new JPanel();
+        panelPrincipal.setLayout(new BorderLayout());
+        panelPrincipal.add(panelBotones, BorderLayout.CENTER);
+        panelPrincipal.add(new JScrollPane(textArea), BorderLayout.SOUTH);
+        
+        add(panelPrincipal);
+        
+        // Agregar listeners a los botones
+        btnCliente.addActionListener(e -> iniciarSesionCliente());
+        btnEmpleado.addActionListener(e -> iniciarSesionEmpleado());
+        btnAdmin.addActionListener(e -> iniciarSesionAdmin());
+        btnSalir.addActionListener(e -> salirAplicacion());
+        
+        cargarDB();
+    }
+    
     public void cargarDB() {
         try {
-        	
             UserReader userReader = new UserReader();
             PieceReader pieceReader = new PieceReader();
             PasarelasReader pasarelasReader = new PasarelasReader();
             PurchasesReader purchasesReader = new PurchasesReader();
 
             Integer loadedPasarelas = pasarelasReader.loadPasarelas("db/");
-            System.out.println("Se cargaron " + loadedPasarelas + " pasarelas");
+            textArea.append("Se cargaron " + loadedPasarelas + " pasarelas\n");
             Integer loadedUsers = userReader.loadUsers("db/");
-            System.out.println("Se cargaron " + loadedUsers + " usuarios");
+            textArea.append("Se cargaron " + loadedUsers + " usuarios\n");
             Integer loadedPieces = pieceReader.loadPieces("db/");
-            System.out.println("Se cargaron " + loadedPieces + " piezas");
+            textArea.append("Se cargaron " + loadedPieces + " piezas\n");
             Integer loadedCompras = purchasesReader.loadCompras("db/");
-            System.out.println("Se cargaron " + loadedCompras + " compras");
+            textArea.append("Se cargaron " + loadedCompras + " compras\n");
             
         } catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
+            textArea.append("Error: " + e.getMessage() + "\n");
             e.printStackTrace();
         }
     }
-
-    public void ejecutarOpcion() throws FileNotFoundException, IOException {
+    
+    private void iniciarSesionCliente() {
+        textArea.append("Iniciar sesión como cliente\n");
         InicioDeSesion inicioDeSesion = new InicioDeSesion();
-        ConsultaDePiezas consultaDePiezas = new ConsultaDePiezas();
-        
-        boolean continuar = true;
-        while (continuar) {
-            try {
+        inicioDeSesion.mostrarInicioDeSesion(new ArrayList<Role>(Arrays.asList(Role.CLIENTE)));
+    }
 
-                System.out.println(
-                        "\n----------------------------------------------------------------------------------------");
-                System.out.println("Bienvenido al Sistema de la Galeria");
-                System.out.println("1. Iniciar sesion como cliente");
-                System.out.println("2. Iniciar sesion como empleado");
-                System.out.println("3. Iniciar sesion como administrador");
-                System.out.println("4. Salir de la aplicacion");
+    private void iniciarSesionEmpleado() {
+        textArea.append("Iniciar sesión como empleado\n");
+        InicioDeSesion inicioDeSesion = new InicioDeSesion();
+        inicioDeSesion.mostrarInicioDeSesion(new ArrayList<Role>(Arrays.asList(Role.CAJERO, Role.OPERADOR)));
+    }
 
-                int opcionSeleccionada = Integer.parseInt(Utils.input("\nPor favor seleccione una opcion"));
+    private void iniciarSesionAdmin() {
+        textArea.append("Iniciar sesión como administrador\n");
+        InicioDeSesion inicioDeSesion = new InicioDeSesion();
+        inicioDeSesion.mostrarInicioDeSesion(new ArrayList<Role>(Arrays.asList(Role.ADMINISTRADOR)));
+    }
 
-                switch (opcionSeleccionada) {
-                    case 1:
-                        System.out.println("Iniciar sesion como cliente");
-                        inicioDeSesion.mostrarInicioDeSesion(
-                                new ArrayList<Role>(Arrays.asList(Role.CLIENTE)));
-                        break;
-                    case 2:
-                        System.out.println("Iniciar sesion como empleado");
-                        inicioDeSesion.mostrarInicioDeSesion(
-                                new ArrayList<Role>(Arrays.asList(Role.CAJERO, Role.OPERADOR)));
-                        break;
-                    case 3:
-                        System.out.println("Iniciar sesion como administrador");
-                        inicioDeSesion.mostrarInicioDeSesion(new ArrayList<Role>(Arrays.asList(Role.ADMINISTRADOR)));
-                        break;
-                    case 4:
-                        System.out.println("Salir de la aplicacion");
-                        continuar = false;
-                        break;
-                    default:
-                        System.out.println("Opcion no valida");
-                        break;
-                }
-            } catch (Exception e) {
-                System.out.println("Error: " + e.getMessage());
-            }
-        }
-        
+    private void salirAplicacion() {
+        textArea.append("Salir de la aplicación\n");
+        System.exit(0);
+    }
+    
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            InterfazInicio interfaz = new InterfazInicio();
+            interfaz.setVisible(true);
+        });
     }
 }
+

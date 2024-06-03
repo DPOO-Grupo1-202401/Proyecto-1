@@ -24,82 +24,81 @@ public class AdminPanel extends JPanel {
         setLayout(new GridBagLayout());
 
         GridBagConstraints constraints = new GridBagConstraints();
-
+        constraints.insets = new Insets(10, 10, 10, 10);
+        constraints.fill = GridBagConstraints.HORIZONTAL;
+        
         JPanel panel = new JPanel(new GridBagLayout());
 
         // Botón "Ver piezas"
         viewPiecesButton = new JButton("Ver piezas");
         viewPiecesButton.addActionListener(new ViewPiecesButtonListener());
-
         constraints.gridx = 0;
         constraints.gridy = 0;
-        constraints.insets = new Insets(10, 10, 10, 10);
         panel.add(viewPiecesButton, constraints);
 
         // Botón "Ver usuarios"
         viewUsersButton = new JButton("Ver usuarios");
         viewUsersButton.addActionListener(new ViewUsersButtonListener());
-
         constraints.gridy = 1;
         panel.add(viewUsersButton, constraints);
 
         // Botón "Ingresar nuevo usuario"
         addUserButton = new JButton("Ingresar nuevo usuario");
         addUserButton.addActionListener(new AddUserButtonListener());
-
         constraints.gridy = 2;
         panel.add(addUserButton, constraints);
 
         // Botón "Ver ofertas de compra"
         viewPurchaseOffersButton = new JButton("Ver ofertas de compra");
         viewPurchaseOffersButton.addActionListener(new ViewPurchaseOffersButtonListener());
-
         constraints.gridy = 3;
         panel.add(viewPurchaseOffersButton, constraints);
 
         // Botón "Aprobar oferta de compra"
         approveOfferButton = new JButton("Aprobar oferta de compra");
         approveOfferButton.addActionListener(new ApproveOfferButtonListener());
-
         constraints.gridy = 4;
         panel.add(approveOfferButton, constraints);
 
         // Botón "Denegar oferta de compra"
         denyOfferButton = new JButton("Denegar oferta de compra");
         denyOfferButton.addActionListener(new DenyOfferButtonListener());
-
         constraints.gridy = 5;
-        add(denyOfferButton, constraints);
+        panel.add(denyOfferButton, constraints);
 
         // Botón "Registrar pieza vendida"
         registerSoldPieceButton = new JButton("Registrar pieza vendida");
         registerSoldPieceButton.addActionListener(new RegisterSoldPieceButtonListener());
-
         constraints.gridy = 6;
-        add(registerSoldPieceButton, constraints);
+        panel.add(registerSoldPieceButton, constraints);
 
         // Botón "Ver piezas de un artista"
         viewArtistPiecesButton = new JButton("Ver piezas de un artista");
         viewArtistPiecesButton.addActionListener(new ViewArtistPiecesButtonListener());
-
         constraints.gridy = 7;
-        add(viewArtistPiecesButton, constraints);
+        panel.add(viewArtistPiecesButton, constraints);
 
         // Botón "Ver piezas de un comprador"
         viewBuyerPiecesButton = new JButton("Ver piezas de un comprador");
         viewBuyerPiecesButton.addActionListener(new ViewBuyerPiecesButtonListener());
-
         constraints.gridy = 8;
-        add(viewBuyerPiecesButton, constraints);
+        panel.add(viewBuyerPiecesButton, constraints);
 
         // Botón "Salir"
         exitButton = new JButton("Salir");
         exitButton.addActionListener(new ExitButtonListener());
-
         constraints.gridy = 9;
-        add(exitButton, constraints);
+        panel.add(exitButton, constraints);
 
-
+        // Añadir el panel al AdminPanel
+        constraints.gridx = 0;
+        constraints.gridy = 0;
+        constraints.gridwidth = 1;
+        constraints.gridheight = 1;
+        constraints.weightx = 1.0;
+        constraints.weighty = 1.0;
+        constraints.fill = GridBagConstraints.BOTH;
+        add(panel, constraints);
     }
 
     private class ViewPiecesButtonListener implements ActionListener {
@@ -172,3 +171,4 @@ public class AdminPanel extends JPanel {
         }
     }
 }
+

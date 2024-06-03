@@ -5,7 +5,7 @@ import util.Utils;
 
 
 public class InterfazEmpleado {
-    private ConsultaDePiezas consultaDePiezas = new ConsultaDePiezas();
+    //private ConsultaDePiezasGUI consultaDePiezas = new ConsultaDePiezasGUI();
     private PieceController pieceController = new PieceController();
 
     public void mostrarOpciones() {
@@ -19,11 +19,11 @@ public class InterfazEmpleado {
             Integer opcion = Integer.parseInt(Utils.input("Ingrese una opcion"));
             switch (opcion) {
                 case 1:
-                    consultaDePiezas.consultarPiezas();
+                  //  consultaDePiezas.consultarPiezas();
                     break;
                 case 2:
                     // Ver ofertas
-                    consultaDePiezas.consultarPiezasBloqueadas();
+                  //  consultaDePiezas.consultarPiezasBloqueadas();
                     break;
                 case 3:
                     // Registrar Pago
@@ -38,7 +38,7 @@ public class InterfazEmpleado {
                 }
                     break;
                 case 4:
-                    consultaDePiezas.consultarPiezasArtista(Utils.input("Ingrese nombre del artista"));
+                    //consultaDePiezas.consultarPiezasArtista(Utils.input("Ingrese nombre del artista"));
                     break;
                 case 5:
                     continuar = false;

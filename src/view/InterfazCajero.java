@@ -11,7 +11,7 @@ import model.User;
 import util.Utils;
 
 public class InterfazCajero {
-    private ConsultaDePiezas consultaDePiezas = new ConsultaDePiezas();
+    //private ConsultaDePiezasGUI consultaDePiezas = new ConsultaDePiezasGUI();
     private PieceController pieceController = new PieceController();
     private PurchaseController purchaseController = new PurchaseController();
 
@@ -26,11 +26,11 @@ public class InterfazCajero {
             Integer opcion = Integer.parseInt(Utils.input("Ingrese una opcion"));
             switch (opcion) {
                 case 1:
-                    consultaDePiezas.consultarPiezas();
+                  //  consultaDePiezas.consultarPiezas();
                     break;
                 case 2:
                     // Ver ofertas
-                    consultaDePiezas.consultarPiezasBloqueadas();
+                   // consultaDePiezas.consultarPiezasBloqueadas();
                     break;
                 case 3:
                 // Ingresar nuevo usuario
@@ -67,7 +67,7 @@ public class InterfazCajero {
                 }
                     break;
                 case 4:
-                    consultaDePiezas.consultarPiezasArtista(Utils.input("Ingrese nombre del artista"));
+                   // consultaDePiezas.consultarPiezasArtista(Utils.input("Ingrese nombre del artista"));
                     break;
                 case 5:
                     continuar = false;
